@@ -1,43 +1,23 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset = utf-8">
-<style>
-	.main {
-		width: 100vw; height: 100vh; position: relative; background-color: skyblue;
-	}
-	.maru {
-		width: 150px; height: 150px;
-		position: absolute; left: calc(50% - 75px); bottom: 30vh;
-	}
-	.maru img {
-		width: 100%; height: 100%; object-fit: contain;
-	}
-	.maru-jump {
-		animation-duration: 0.5s; animation-name: jump;
-	}
-	.ground {
-		width: 100%; height: 30vh; position: absolute; background-color: green; absolute; bottom: 0;
-	}
-	@keyframes jump {
-		0% { transform: translateY(0%) } 50% { transform: translateY(-100%) } 100% { transform: translateY(0%) }
-	}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이 점프를 봐, 대박임</title>
+  <link href="./jump.css" rel="stylesheet">
+  <link href="./reset.css" rel="stylesheet">
 </head>
+
 <body>
-	<div class="main">
-		<div class="maru">
-			<img src="./image.png">
-		</div>
-		<div class="ground"></div>
-	</div>
-<body>
-<script>
-	const maru = document.querySelector('.maru')
-	const removeJump = () => maru.classList.remove('maru-jump');
-	document.addEventListener('keydown', (event) => {
-		maru.classList.add('maru-jump');
-		setTimeout(removeJump, 500);
-	});
-</script>
+  <div class="main">
+    <div class="maru">
+      <img src="./maru.png">
+    </div>
+    <div class="ground"></div>
+  </div>
+</body>
+
+<script src="./jump.js"></script>
+
 </html>
